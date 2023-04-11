@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:33:53 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/05 15:10:59 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/11 15:50:32 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cat::Cat(void) {
 	this->_type = "Cat";
+	this->_brain = new Brain;
 	std::cout << "Default Cat constructor called" << std::endl;
 }
 
@@ -23,6 +24,7 @@ Cat::Cat(Cat const & src) {
 }
 
 Cat::~Cat(void) {
+	delete this->_brain;
 	std::cout << "Cat destructor called" << std::endl;
 }
 

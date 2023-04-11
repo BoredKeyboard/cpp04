@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:30:25 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/05 15:34:35 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/11 13:15:26 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include "Brain.hpp"
 
 class Cat : public Animal, public Brain {
+	private:
+		Brain*	_brain;
 	public:
 		Cat(void);
 		Cat(Cat const & src);

@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:23:56 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/06 13:59:18 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/11 15:33:52 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,30 @@ void	leakfunc(void) {
 int main()
 {
 	atexit(leakfunc);
+	// {
+	// 	const Animal* j = new Dog();
+	// 	const Animal* i = new Cat();
+	// 	delete j;//should not create a leak
+	// 	delete i;
+	// 	return 0;
+	// }
 	{
-		const Animal* meta = new Animal();
-		const Animal* j = new Dog();
-		const Animal* i = new Cat();
-		std::cout << j->getType() << " " << std::endl;
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound(); //will output the cat sound!
-		j->makeSound();
-		meta->makeSound();
-		delete meta;
-		delete i;
-		delete j;
-	}
-	{
-		const WrongAnimal* meta = new WrongAnimal();
-		const WrongAnimal* i = new WrongCat();
-		std::cout << i->getType() << " " << std::endl;
-		i->makeSound(); //will output the cat sound!
-		meta->makeSound();
-		delete meta;
-		delete i;
+		int	amount = 10;
+		Animal* animals[10];
+		for (int i = 0; i < amount; i++) {
+			if (i % 2)
+				animals[i] = new Dog();
+			else
+				animals[i] = new Cat();
+			std::cout << std::endl;
+		}
+		std::cout << std::endl;
+		std::cout << std::endl;
+		for (int i = 0; i < amount; i++) {
+			delete animals[i];
+			std::cout << std::endl;
+		}
 	}
 
-return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }

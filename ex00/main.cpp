@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:23:56 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/06 13:51:17 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/11 12:12:43 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ int main()
 		delete i;
 	}
 
-return (EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
