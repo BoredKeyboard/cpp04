@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:23:56 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/12 16:12:18 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/12 16:43:47 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ int main()
 		std::cout << "Dog b idea 1: " << b.get_idea(1) << std::endl;
 	}
 	{
+		std::cout << std::endl;
+		std::cout << std::endl;
 		int	amount = 10;
 		Animal* animals[10];
 		for (int i = 0; i < amount; i++) {
