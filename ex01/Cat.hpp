@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:30:25 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/11 13:15:26 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/12 15:59:58 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "Animal.hpp"
 # include "Brain.hpp"
 
-class Cat : public Animal, public Brain {
+class Cat : public Animal {
 	private:
 		Brain*	_brain;
 	public:
@@ -26,6 +26,8 @@ class Cat : public Animal, public Brain {
 		~Cat(void);
 		Cat & operator=(Cat const & src);
 		void makeSound(void) const;
+		void	add_idea(std::string idea);
+		std::string	get_idea(int n);
 };
 
 #endif
