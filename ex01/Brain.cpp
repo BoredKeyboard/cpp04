@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 15:18:53 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/12 15:59:45 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/18 15:59:37 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	Brain::set_idea(std::string idea) {
 	this->n_ideas++;
 }
 
-std::string	Brain::get_idea(int n) {
+std::string const &	Brain::get_idea(int n) {
 	return (this->_ideas[n]);
 }

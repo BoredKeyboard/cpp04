@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:30:25 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/12 15:59:58 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/18 16:00:30 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Cat : public Animal {
 		Cat & operator=(Cat const & src);
 		void makeSound(void) const;
 		void	add_idea(std::string idea);
-		std::string	get_idea(int n);
+		std::string const &	get_idea(int n);
 };
 
 #endif

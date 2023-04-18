@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/05 15:18:37 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/12 15:59:50 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/18 15:59:31 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Brain {
 		virtual ~Brain(void);
 		Brain & operator=(Brain const & src);
 		void	set_idea(std::string idea);
-		std::string	get_idea(int n);
+		std::string const &	get_idea(int n);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mforstho <mforstho@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/04 15:33:53 by mforstho      #+#    #+#                 */
-/*   Updated: 2023/04/12 16:07:20 by mforstho      ########   odam.nl         */
+/*   Updated: 2023/04/18 15:59:26 by mforstho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	Cat::add_idea(std::string idea) {
 	this->_brain->set_idea(idea);
 }
 
-std::string	Cat::get_idea(int n) {
+std::string const &	Cat::get_idea(int n) {
 	return (this->_brain->get_idea(n));
 }
